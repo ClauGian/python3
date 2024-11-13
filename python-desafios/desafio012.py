@@ -1,4 +1,5 @@
-vlr = float(input('Quanto custa esse produto? '))
-desc = (vlr * 5) / 100
-vcd = vlr - desc
-print('Este produto tem desconto de 5% que é {:.2f} e sai por {:.2f}'.format(desc, vcd))
+print('Quanto custa esse produto?')
+vlr = float(input('Esse produto custa R$ '))
+desc = 5
+vcd = vlr - (vlr * 5 / 100)
+print('Mas com o desconto de 5% ele sai por {:.2f}'.format(vcd))
