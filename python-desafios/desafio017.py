@@ -1,8 +1,14 @@
 import math
-print('Temos um triângulo retângulo com o cateto oposto medindo 4cm \ne o cateto adjacente medindo 7cm. Calcular a hipotenusa.')
-co = 4
-ca = 7
+print('Temos um triângulo retângulo com as seguintes medidas:')
+co = float(input('Digite a medida do cateto oposto em cm: '))
+ca = float(input('Digite a medida do cateto adjavcente em cm: '))
 hip = math.sqrt(co ** 2 + ca ** 2)
-print('O valor da hipotenusa é: {} ou {:.2f}cm'.format(hip, hip))
+print('O valor da hipotenusa é: {} formatando = {:.2f} cm'.format(hip, hip))
 
-# a formula é c² = a² + b² onde c = hipotenusa, a = cateto oposto e b = cateto adjacente
+""" a formula é c² = a² + b² onde c = hipotenusa, a = cateto oposto e b = cateto adjacente
+ou pode usar a formula pronta math.hypot """
+
+co = float(input('Digite a medida do cateto oposto em cm: '))
+ca = float(input('Digite a medida do cateto adjavcente em cm: '))
+hip = math.hypot(co, ca)
+print('O valor da hipotenusa é: {} formatando = {:.2f} cm'.format(hip, hip))

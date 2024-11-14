@@ -1,6 +1,7 @@
 import math
 from math import pi
+num = float(input('Digite um número: '))
+print('A parte inteira de {} é {}'.format(num, math.trunc(num)))
+print('PI = ', pi,'A parte inteira de PI é = {}'.format(math.trunc(pi)))
 
-print('Podemos arredondar números como o PI = {} Que ficará assim:'.format(pi))
-print('Arredondando para cima: {}'.format(math.ceil(pi)))
-print('Arredondando para baixo: {}'.format(math.floor(pi)))
+
