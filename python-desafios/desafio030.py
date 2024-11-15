@@ -1,6 +1,6 @@
-n = int(input('Digite um número: '))
+n = int(input('\033[34mDigite um número:\033[m '))
 if n % 2 == 0:
-    print('O número {} é PAR.'.format(n))
+    print('O número {} é \033[30;43mPAR\033[m.'.format(n))
 else:
-    print('O número {} é IMPAR.'.format(n))
+    print('O número {} é \033[30;46mIMPAR\033[m.'.format(n))
 
