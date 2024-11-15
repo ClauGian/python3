@@ -1,3 +1,3 @@
-cidade = str(input('Qual o nome da sua cidade? '))
+cidade = str(input('Qual o nome da sua cidade? ')).lower()
 
-print('Santo' in cidade.split()[0])
+print('santo' in cidade.strip().split()[0])
