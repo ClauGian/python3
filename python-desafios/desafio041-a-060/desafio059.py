@@ -1,17 +1,18 @@
+from time import sleep
 n1 = int(input('Digite um valor: '))
 n2 = int(input('Digite outro valor: '))
-opção = ''
+
 r = 0
 c = 1
 maior = 0
-
-while c != (opção == 5):
+opção = 0
+while opção != 5:
     print('''O que deseja fazer?
-     [ 1 ] Somar
-     [ 2 ] Multiplicar
-     [ 3 ] Maior
-     [ 4 ] Novos números
-     [ 5 ] Sair''')
+[ 1 ] Somar
+[ 2 ] Multiplicar
+[ 3 ] Maior
+[ 4 ] Novos números
+[ 5 ] Sair''')
     opção = int(input('Qual a sua opção? '))
     print()
     if opção == 1:
@@ -30,13 +31,14 @@ while c != (opção == 5):
         print('O maior número entre {} e {} é o número: {}.'.format(n1, n2, maior))
         print()
     if opção == 4:
-        n3 = int(input('Qual número deseja incluir? '))
-        print()
-        print('Agora temos os números {}, {} e {}.'.format(n1, n2, n3))
+        print('Informe os novos valores:')
+        n1 = int(input('Digite o novo valor: '))
+        n2 = int(input('Digite o novo valor: '))
         print()
     if opção < 1 or opção > 5:
         print('Você digitou ERRADO! Tente novamente.')
         print()
-
-print('Fim.')
+    print('=-=' * 20)
+    sleep(2)
+print('Fim do programa. Volte sempre.')
 

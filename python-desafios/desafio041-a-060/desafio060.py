@@ -16,4 +16,4 @@ for c in range(n, 0, -1):
     f = f * c
     print('{}'.format(c), end=' x ')
 print('\033[34m  → →\033[m ', end='')
-print('  O fatorial de {} é igual a:{}.'.format(n, f))
+print('  O Fatorial de {} é igual a {}.'.format(n, f))

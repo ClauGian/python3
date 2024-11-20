@@ -1,10 +1,8 @@
 M = 'Masculino'
 F = 'Feminino'
 c = 1
-sexo = str(input('Qual é seu sexo? [M / F]: '))
-while sexo == 'm' or sexo == 'f':
-    sexo = str(input('ERRO! Digite novamente! '))
-    c += 1
-print('Ok, Você digitou corretamente.')
+sexo = str(input('Qual é seu sexo? [M / F]: ')).strip().upper()[0]
+while sexo not in 'MmFf':
+    sexo = str(input('Dados invalidos! Por favor informe seu sexo. ')).strip().upper()[0]
+print('Sexo {} registrado com sucesso.'.format(sexo))
 
-print('Fim')
