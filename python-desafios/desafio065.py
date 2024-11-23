@@ -1,18 +1,13 @@
-import sys
+
 resp = 's'
-qtde = 0
-soma = 0
-media = 0
-maior = 0
-menor = sys.maxsize
-c = 1
-while c == (resp == 's'):
+qtde = soma = media = maior = menor = 0
+while resp in 'Ss':
     n = int(input('Digite um número: '))
-    resp = str(input('Deseja continuar? [s / n]: '))
-    qtde = qtde + 1
-    soma = soma + n
+    resp = str(input('Deseja continuar? [s / n]: ')).upper().strip()[0]
+    qtde += 1
+    soma += n
     media = soma / qtde
-    if n == 1:
+    if qtde == 1:
         maior = menor = n
     else:
         if n < menor:
