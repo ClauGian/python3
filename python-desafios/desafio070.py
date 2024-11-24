@@ -1,26 +1,27 @@
-import sys
+
 print('<->' * 12)
 print('{:^44}'.format('\033[34m L O J A S   C & G \033[m'))
 print('<->' * 12)
-resp = nome = ''
-preço = total = caro = menor = 0
+total = totmil = menor = cont = 0
+barato = ''
+while True:
+    produto = str(input('Qual nome do produto? '))
+    valor = float(input('Qual foi o preço? R$ '))
+    cont += 1
+    total += valor
+    if valor > 1000:
+        totmil += 1
+    if cont == 1 or valor < menor:
+        menor = valor
+        barato = produto
 
-while resp != 'N':
-    nome = str(input('Nome produto: '))
-    preço = int(input('Qual o preço: '))
+    resp = ' '
+    while resp not in 'SN':
+        resp = str(input('Continuar [S/N]: ')).upper().strip()[0]
+    if resp == 'N':
+        break
 
-    total += preço
-    if preço >= 1000:
-        caro += 1
-    if nome == 1:
-        menor = preço
-    else:
-        if preço < menor:
-            menor = preço
-
-
-    resp = str(input('Continuar [S/N]: ')).upper()
     print('...' * 12)
 print(f'O total de compras foi de: {total:.2f}')
-print(f'Temos {caro} produtos com valor acima de R$ 1.000,00.')
-print(f'O produto mais barato foi {nome} no valor de R$ {menor}')
+print(f'Temos {totmil} produtos com valor acima de R$ 1.000,00.')
+print(f'O produto mais barato foi {barato} que custa R$ {menor:.2f}')
