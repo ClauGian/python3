@@ -37,6 +37,7 @@ c = (a + b)
 print(a)
 print(b)
 print(c)
+print(c.index(3)) # Mostra em que posição está o número 3.
 print()
 n = (2, 4, 6, 8)
 print(n)
