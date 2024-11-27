@@ -9,8 +9,8 @@ palavras = tuple(palavras)
 for n in palavras:
     print(f'\nA palavra {n.upper()} possui as vogais: ', end='')
     for letras in n:
-        if letras.lower() in 'aeiou':
-            print(letras, end=' - ')
+        if letras.lower() in vogais:
+            print(letras, end='  ')
 
 
 
