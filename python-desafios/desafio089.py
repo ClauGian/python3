@@ -1,28 +1,27 @@
-alunos= []
-notas = []
-média = []
-print()
-print(f'{"CADASTRO DE ALUNOS":=^50}')
+turma = list()
+
 while True:
-    alunos.append(str(input('Nome: ')))
-    n1 = float(input('Nota 1: '))
-    n2 = float(input('Nota 2: '))
-    notas.append([n1] + [n2])
-    resp = str(input('Deseja continuar?[S/N]: ')).upper().strip()[0]
+    aluno = str(input('Nome: '))
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
+    média = (nota1 + nota2) / 2
+    turma.append([aluno, [nota1, nota2], média])
+    resp = str(input('Deseja Continuar? [S/N]: ')).upper().strip()[0]
     if resp == 'N':
         break
-    print('-=' * 50)
-    m = (n1 + n2) / 2
-    média.append(m)
-
-
-
-
+print('-*' * 30)
+print(f' {"Nº.":<5}{"NOME":<10}{"MÉDIA":>8}')
+print('--' * 30)
+for i, a in enumerate(turma):
+    print(f' {i:<5}{a[0]:<10}{a[2]:>8.1f}')
 while True:
-    c = int(input('Mostrar as notas de qual aluno? [999 interrompe]: '))
-    if c == 999:
+    print()
+    opção = int(input('Mostrar notas de qual aluno? '
+                      '[999 para interromper.]: '))
+    if opção == 999:
+        print('>>>> FINALIZANDO...')
         break
-    print(f'As notas de {alunos[c]} são {notas[c]} ')
-
-
+    print(f'As notas de {turma[opção][0]} são {turma[opção][1]}')
+print('-.' * 30)
+print('{:-^60}'.format('<< VOLTE SEMPRE >>'))
 
