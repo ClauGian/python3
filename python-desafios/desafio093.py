@@ -24,3 +24,4 @@ print(f'Foi um total de {jogo['total']} gols.')
 
 
 
+
