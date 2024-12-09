@@ -17,4 +17,4 @@ print('-:' * 20)
 print(f'O jogador {aprov["nome"]} jogou {qt} partidas:')
 for p, g in enumerate(gols):
     print(f'  ==> Na {p+1}ª partida, fez {g} gols.')
-print(f'    Marcou um total de {aprov["tot_gols"]} gols')
+print(f' → {aprov["nome"]} marcou um total de {aprov["tot_gols"]} gols')

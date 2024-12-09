@@ -1,5 +1,5 @@
-from datetime import date
-ano = date.today().year
+from datetime import datetime
+ano = datetime.now().year
 cadastro = {}
 while True:
     cadastro['Nome'] = str(input('Nome: '))
@@ -16,5 +16,5 @@ while True:
     break
 print('-*' * 15)
 for k, v in cadastro.items():
-    print(f'{k} tem o valor {v}.')
+    print(f' → {k} tem o valor {v}.')
 print('Fim...')

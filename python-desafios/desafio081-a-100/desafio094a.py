@@ -12,7 +12,6 @@ while True:
     cad['idade'] = int(input('Idade: '))
     soma += cad['idade']
     pessoas.append(cad.copy())
-
     while True:
         resp = str(input('Deseja continuar? [S/N]: ')).upper().strip()[0]
         if resp in 'SN':
@@ -24,15 +23,15 @@ while True:
 print(f'A) Foram cadastradas {len(pessoas)} pessoas.')
 media = soma / len(pessoas)
 print(f'B) A média de idade é de {media:.1f} anos.')
-print('C) As mulheres cadastradas foram: ', end='')
+print('C) As mulheres cadastradas foram: ')
 for p in pessoas:
     if p['sexo'] == 'F':
-        print(f'{p['nome']:→>}', end='  ')
+        print(f'{p['nome']:→>}', end=' ')
 print()
 print('D) Lista das pessoas que estão acima da média de idade:')
 print()
 for p in pessoas:
     if p['idade'] >= media:
         for k, v in p.items():
-            print(f'   > {k} = {v}   ', end='')
+            print(f' {k} = {v}  ', end='→')
 print()
